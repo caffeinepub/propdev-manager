@@ -1,0 +1,207 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "PropDev Manager Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "summary": "Build Properties dashboard page with grid/list view, filtering, and CRUD functionality",
+      "acceptanceCriteria": [
+        "Properties are displayed with all key information visible",
+        "Users can filter properties by status and type",
+        "Users can create new properties, edit existing ones, and delete properties",
+        "The interface is responsive and works on desktop and tablet devices"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useProperties.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for fetching all properties (getAllProperties), creating properties (createProperty), updating properties (updateProperty), and deleting properties (deleteProperty). Use the authorization component to ensure users are authenticated before accessing property data."
+        },
+        {
+          "path": "frontend/src/components/PropertyCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable PropertyCard component that displays property information including name, address, type, status, and completion date with proper formatting. Include edit and delete action buttons."
+        },
+        {
+          "path": "frontend/src/components/PropertyForm.tsx",
+          "operation": "create",
+          "description": "Create a PropertyForm component for creating and editing properties with fields for name, address, type (residential/commercial/mixed-use), status (planning/development/completed), acquisition date, and estimated completion date. Include form validation and submit/cancel actions."
+        },
+        {
+          "path": "frontend/src/components/PropertyFilters.tsx",
+          "operation": "create",
+          "description": "Create a PropertyFilters component with dropdown selects for filtering by status and type. Include a clear filters option."
+        },
+        {
+          "path": "frontend/src/pages/PropertiesPage.tsx",
+          "operation": "create",
+          "description": "Create the PropertiesPage component that uses useProperties hook to fetch and display properties. Integrate PropertyCard, PropertyForm, and PropertyFilters components. Implement grid/list view toggle, add property button, and handle create/edit/delete operations. Wire the generated property icon from frontend/public/assets/generated/property-icon.dim_64x64.png for visual branding."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Projects page with project details, filtering, and CRUD capabilities",
+      "acceptanceCriteria": [
+        "Projects are displayed with property association visible",
+        "Users can filter projects by status and associated property",
+        "Users can create new projects and edit existing ones",
+        "Budget and timeline information is clearly presented"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useProjects.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for fetching all projects (getAllProjects), creating projects (createProject), updating projects (updateProject), and deleting projects (deleteProject). Use the authorization component to ensure users are authenticated."
+        },
+        {
+          "path": "frontend/src/components/ProjectCard.tsx",
+          "operation": "create",
+          "description": "Create a ProjectCard component displaying project name, associated property name (fetched via property ID), budget, timeline, and current phase. Include edit and delete action buttons."
+        },
+        {
+          "path": "frontend/src/components/ProjectForm.tsx",
+          "operation": "create",
+          "description": "Create a ProjectForm component for creating and editing projects with fields for name, description, budget, start date, target completion date, current phase, and property selection dropdown. Include form validation."
+        },
+        {
+          "path": "frontend/src/components/ProjectFilters.tsx",
+          "operation": "create",
+          "description": "Create a ProjectFilters component with dropdowns for filtering by project status (derived from current phase) and associated property."
+        },
+        {
+          "path": "frontend/src/pages/ProjectsPage.tsx",
+          "operation": "create",
+          "description": "Create the ProjectsPage component that uses useProjects and useProperties hooks to fetch and display projects with property associations. Integrate ProjectCard, ProjectForm, and ProjectFilters components. Handle CRUD operations. Wire the generated project icon from frontend/public/assets/generated/project-icon.dim_64x64.png for visual branding."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Build Tasks page with project organization, status/priority indicators, filtering, and CRUD operations",
+      "acceptanceCriteria": [
+        "Tasks are organized by their associated projects",
+        "Status and priority are visually distinct (colors, badges, or icons)",
+        "Users can filter tasks by multiple criteria simultaneously",
+        "Users can create tasks, update task details, and change task status"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useTasks.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for fetching all tasks (getAllTasks), creating tasks (createTask), updating tasks (updateTask), and deleting tasks (deleteTask). Use the authorization component to ensure users are authenticated."
+        },
+        {
+          "path": "frontend/src/components/TaskCard.tsx",
+          "operation": "create",
+          "description": "Create a TaskCard component displaying task name, description, assigned team member name, status badge with color coding (not-started: gray, in-progress: blue, completed: green), priority badge with color coding (low: green, medium: yellow, high: red), and due date. Include edit and delete action buttons."
+        },
+        {
+          "path": "frontend/src/components/TaskForm.tsx",
+          "operation": "create",
+          "description": "Create a TaskForm component for creating and editing tasks with fields for name, description, assigned team member dropdown, status dropdown, priority dropdown, due date, and project selection dropdown. Include form validation."
+        },
+        {
+          "path": "frontend/src/components/TaskFilters.tsx",
+          "operation": "create",
+          "description": "Create a TaskFilters component with dropdowns for filtering by status, priority, and assigned team member. Support multiple simultaneous filters."
+        },
+        {
+          "path": "frontend/src/pages/TasksPage.tsx",
+          "operation": "create",
+          "description": "Create the TasksPage component that uses useTasks, useProjects, and useTeamMembers hooks to fetch and display tasks organized by project. Integrate TaskCard, TaskForm, and TaskFilters components. Handle CRUD operations and status updates."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Build Team page displaying members with roles, project assignments, and management capabilities",
+      "acceptanceCriteria": [
+        "Team members are displayed with role and contact information",
+        "Active project assignments are visible for each team member",
+        "Users can add new team members and edit existing member details"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useTeamMembers.ts",
+          "operation": "create",
+          "description": "Create React Query hooks for fetching all team members (getAllTeamMembers), adding team members (addTeamMember), updating team members (updateTeamMember), and removing team members (removeTeamMember). Use the authorization component to ensure users are authenticated."
+        },
+        {
+          "path": "frontend/src/components/TeamMemberCard.tsx",
+          "operation": "create",
+          "description": "Create a TeamMemberCard component displaying team member name, role, email, and list of active project names (resolved from project IDs). Include edit and remove action buttons."
+        },
+        {
+          "path": "frontend/src/components/TeamMemberForm.tsx",
+          "operation": "create",
+          "description": "Create a TeamMemberForm component for adding and editing team members with fields for name, role, email, and project assignments (multi-select). Include form validation."
+        },
+        {
+          "path": "frontend/src/pages/TeamPage.tsx",
+          "operation": "create",
+          "description": "Create the TeamPage component that uses useTeamMembers and useProjects hooks to fetch and display team members with project associations. Integrate TeamMemberCard and TeamMemberForm components. Handle add/edit/remove operations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Create navigation system for moving between Properties, Projects, Tasks, and Team pages",
+      "acceptanceCriteria": [
+        "Navigation menu is accessible from all pages",
+        "Current page is visually highlighted in navigation",
+        "Navigation works consistently across all views"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create a Navigation component with links to Properties, Projects, Tasks, and Team pages. Highlight the active route using React Router's useLocation hook. Include the app logo/title and LoginButton component."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a Layout component that wraps the Navigation component and page content area. This provides consistent structure across all pages."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Integrate React Router and define routes for PropertiesPage (/properties), ProjectsPage (/projects), TasksPage (/tasks), and TeamPage (/team). Wrap routes with Layout component. Set /properties as the default route. Add ProfileSetupModal for first-time users as per authorization component requirements. Verify the authorization component's usage instructions before implementing authentication guards."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Design professional, modern visual theme with cohesive corporate color palette and consistent styling",
+      "acceptanceCriteria": [
+        "All pages follow a consistent visual theme",
+        "Color palette is professional and not overwhelming",
+        "Typography is readable and establishes clear hierarchy",
+        "Layout patterns are consistent across all sections"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind configuration with a professional corporate color palette including primary (corporate blue), secondary (slate gray), accent (professional teal), success (green), warning (amber), and danger (red) colors. Configure extended spacing and shadow utilities for polished appearance."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for the corporate theme colors and typography. Set base typography styles with clear hierarchy (headings, body, labels). Add a professional hero section background using the generated hero background image from frontend/public/assets/generated/hero-background.dim_1920x600.png. Establish consistent spacing and layout patterns."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a HeroSection component for the Properties page (default landing page) that displays a professional banner with the generated hero background image from frontend/public/assets/generated/hero-background.dim_1920x600.png. Include application title and tagline overlay with corporate branding aesthetic."
+        },
+        {
+          "path": "frontend/src/pages/PropertiesPage.tsx",
+          "operation": "modify",
+          "description": "Integrate the HeroSection component at the top of the PropertiesPage to establish professional branding on the landing page."
+        }
+      ]
+    }
+  ]
+}

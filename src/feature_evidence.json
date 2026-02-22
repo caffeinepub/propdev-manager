@@ -1,0 +1,135 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-build-a-properties-dashboard-page-that-displays-all-properties-in-a-grid-or-list-view-with-key-information-name-address-type-status-completion-date-allows-filtering-by-status-and-type-and-provides-add-edit-delete-functionality",
+      "featureTitle": "Build a Properties dashboard page that displays all properties in a grid or list view with key information (name, address, type, status, completion date), allows filtering by status and type, and provides add/edit/delete functionality",
+      "files": [
+        "frontend/src/components/PropertyCard.tsx",
+        "frontend/src/components/PropertyFilters.tsx",
+        "frontend/src/components/PropertyForm.tsx",
+        "frontend/src/pages/PropertiesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-projects-page-that-displays-all-development-projects-with-key-details-name-property-budget-timeline-phase-allows-filtering-by-status-and-property-and-provides-project-creation-and-editing-capabilities",
+      "featureTitle": "Build a Projects page that displays all development projects with key details (name, property, budget, timeline, phase), allows filtering by status and property, and provides project creation and editing capabilities",
+      "files": [
+        "frontend/src/components/ProjectCard.tsx",
+        "frontend/src/components/ProjectFilters.tsx",
+        "frontend/src/components/ProjectForm.tsx",
+        "frontend/src/pages/ProjectsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-tasks-page-that-displays-all-tasks-organized-by-project-shows-task-status-and-priority-with-visual-indicators-allows-filtering-by-status-priority-and-assigned-team-member-and-provides-task-creation-editing-and-status-updates",
+      "featureTitle": "Build a Tasks page that displays all tasks organized by project, shows task status and priority with visual indicators, allows filtering by status, priority, and assigned team member, and provides task creation, editing, and status updates",
+      "files": [
+        "frontend/src/components/TaskCard.tsx",
+        "frontend/src/components/TaskFilters.tsx",
+        "frontend/src/components/TaskForm.tsx",
+        "frontend/src/pages/TasksPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-a-team-page-that-displays-all-team-members-with-their-roles-shows-active-project-assignments-for-each-member-and-provides-team-member-management-capabilities",
+      "featureTitle": "Build a Team page that displays all team members with their roles, shows active project assignments for each member, and provides team member management capabilities",
+      "files": [
+        "frontend/src/components/TeamMemberCard.tsx",
+        "frontend/src/components/TeamMemberForm.tsx",
+        "frontend/src/pages/TeamPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-navigation-system-that-allows-users-to-move-between-properties-projects-tasks-and-team-pages-with-clear-indication-of-the-current-page",
+      "featureTitle": "Create a navigation system that allows users to move between Properties, Projects, Tasks, and Team pages with clear indication of the current page",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-a-professional-modern-visual-theme-for-the-application-with-a-cohesive-color-palette-suitable-for-business-corporate-use-clear-typography-hierarchy-consistent-spacing-and-layout-patterns-and-a-polished-trustworthy-appearance-that-conveys-expertise-in-property-development-and-project-management",
+      "featureTitle": "Design a professional, modern visual theme for the application with a cohesive color palette suitable for business/corporate use, clear typography hierarchy, consistent spacing and layout patterns, and a polished, trustworthy appearance that conveys expertise in property development and project management",
+      "files": [
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/PropertiesPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

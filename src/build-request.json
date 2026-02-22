@@ -1,0 +1,183 @@
+{
+  "kind": "build_request",
+  "title": "Create property development and project management application",
+  "projectName": "PropDev Manager",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model for Properties with fields including property name, address, type (residential/commercial/mixed-use), status (planning/development/completed), acquisition date, and estimated completion date",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Property records can be created with all specified fields",
+        "Properties can be retrieved, updated, and deleted",
+        "Property status can be tracked through development lifecycle"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a backend data model for Development Projects linked to Properties, with fields including project name, description, budget, start date, target completion date, current phase, and associated property ID",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Projects can be created and linked to specific properties",
+        "Project budget and timeline information is stored and retrievable",
+        "Projects can be queried by property or status"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a backend data model for Tasks with fields including task name, description, assigned team member, status (not-started/in-progress/completed), priority (low/medium/high), due date, and associated project ID",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Tasks can be created and linked to projects",
+        "Task status and priority can be updated",
+        "Tasks can be filtered by status, priority, or assigned member"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a backend data model for Team Members with fields including name, role, email, and active projects list",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Team members can be created and managed",
+        "Team members can be assigned to projects",
+        "Active project assignments are tracked per team member"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build a Properties dashboard page that displays all properties in a grid or list view with key information (name, address, type, status, completion date), allows filtering by status and type, and provides add/edit/delete functionality",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Properties are displayed with all key information visible",
+        "Users can filter properties by status and type",
+        "Users can create new properties, edit existing ones, and delete properties",
+        "The interface is responsive and works on desktop and tablet devices"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build a Projects page that displays all development projects with key details (name, property, budget, timeline, phase), allows filtering by status and property, and provides project creation and editing capabilities",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Projects are displayed with property association visible",
+        "Users can filter projects by status and associated property",
+        "Users can create new projects and edit existing ones",
+        "Budget and timeline information is clearly presented"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Build a Tasks page that displays all tasks organized by project, shows task status and priority with visual indicators, allows filtering by status, priority, and assigned team member, and provides task creation, editing, and status updates",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Tasks are organized by their associated projects",
+        "Status and priority are visually distinct (colors, badges, or icons)",
+        "Users can filter tasks by multiple criteria simultaneously",
+        "Users can create tasks, update task details, and change task status"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Build a Team page that displays all team members with their roles, shows active project assignments for each member, and provides team member management capabilities",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Team members are displayed with role and contact information",
+        "Active project assignments are visible for each team member",
+        "Users can add new team members and edit existing member details"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create a navigation system that allows users to move between Properties, Projects, Tasks, and Team pages with clear indication of the current page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation menu is accessible from all pages",
+        "Current page is visually highlighted in navigation",
+        "Navigation works consistently across all views"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Design a professional, modern visual theme for the application with a cohesive color palette suitable for business/corporate use, clear typography hierarchy, consistent spacing and layout patterns, and a polished, trustworthy appearance that conveys expertise in property development and project management",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages follow a consistent visual theme",
+        "Color palette is professional and not overwhelming",
+        "Typography is readable and establishes clear hierarchy",
+        "Layout patterns are consistent across all sections"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use single-actor Motoko backend architecture",
+    "Do not modify immutable frontend paths (useInternetIdentity, useActor, main.tsx, ui components)",
+    "Use React with TypeScript, Tailwind CSS, and React Query for frontend"
+  ],
+  "nonGoals": [
+    "Real-time collaboration features",
+    "External calendar integrations",
+    "Document storage or file uploads",
+    "Email notifications or messaging",
+    "Mobile native apps",
+    "Third-party authentication beyond Internet Identity"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Professional hero background image showing modern property development or construction with clean, corporate aesthetic (hero-background.dim_1920x600.png)",
+      "Simple property icon representing buildings or real estate in a minimalist style (property-icon.dim_64x64.png)",
+      "Simple project management icon representing planning or coordination in a minimalist style (project-icon.dim_64x64.png)"
+    ],
+    "edits": []
+  }
+}

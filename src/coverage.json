@@ -1,0 +1,270 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T23:33:21.031Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 10,
+    "implemented": 6,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a backend data model for Properties with fields including property name, address, type (residential/commercial/mixed-use), status (planning/development/completed), acquisition date, and estimated completion date",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-10",
+        "summary": "Design a professional, modern visual theme for the application with a cohesive color palette suitable for business/corporate use, clear typography hierarchy, consistent spacing and layout patterns, and a polished, trustworthy appearance that conveys expertise in property development and project management",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/pages/PropertiesPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/tailwind.config.js",
+          "frontend/src/index.css",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/pages/PropertiesPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Create a backend data model for Development Projects linked to Properties, with fields including project name, description, budget, start date, target completion date, current phase, and associated property ID",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Create a backend data model for Tasks with fields including task name, description, assigned team member, status (not-started/in-progress/completed), priority (low/medium/high), due date, and associated project ID",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Create a backend data model for Team Members with fields including name, role, email, and active projects list",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Build a Properties dashboard page that displays all properties in a grid or list view with key information (name, address, type, status, completion date), allows filtering by status and type, and provides add/edit/delete functionality",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useProperties.ts",
+          "frontend/src/components/PropertyCard.tsx",
+          "frontend/src/components/PropertyForm.tsx",
+          "frontend/src/components/PropertyFilters.tsx",
+          "frontend/src/pages/PropertiesPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PropertyCard.tsx",
+          "frontend/src/components/PropertyForm.tsx",
+          "frontend/src/components/PropertyFilters.tsx",
+          "frontend/src/pages/PropertiesPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Build a Projects page that displays all development projects with key details (name, property, budget, timeline, phase), allows filtering by status and property, and provides project creation and editing capabilities",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useProjects.ts",
+          "frontend/src/components/ProjectCard.tsx",
+          "frontend/src/components/ProjectForm.tsx",
+          "frontend/src/components/ProjectFilters.tsx",
+          "frontend/src/pages/ProjectsPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/ProjectCard.tsx",
+          "frontend/src/components/ProjectForm.tsx",
+          "frontend/src/components/ProjectFilters.tsx",
+          "frontend/src/pages/ProjectsPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Build a Tasks page that displays all tasks organized by project, shows task status and priority with visual indicators, allows filtering by status, priority, and assigned team member, and provides task creation, editing, and status updates",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useTasks.ts",
+          "frontend/src/components/TaskCard.tsx",
+          "frontend/src/components/TaskForm.tsx",
+          "frontend/src/components/TaskFilters.tsx",
+          "frontend/src/pages/TasksPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/TaskCard.tsx",
+          "frontend/src/components/TaskForm.tsx",
+          "frontend/src/components/TaskFilters.tsx",
+          "frontend/src/pages/TasksPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Build a Team page that displays all team members with their roles, shows active project assignments for each member, and provides team member management capabilities",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useTeamMembers.ts",
+          "frontend/src/components/TeamMemberCard.tsx",
+          "frontend/src/components/TeamMemberForm.tsx",
+          "frontend/src/pages/TeamPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/TeamMemberCard.tsx",
+          "frontend/src/components/TeamMemberForm.tsx",
+          "frontend/src/pages/TeamPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Create a navigation system that allows users to move between Properties, Projects, Tasks, and Team pages with clear indication of the current page",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Navigation.tsx",
+          "frontend/src/components/Layout.tsx",
+          "frontend/src/App.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/authorization/MixinAuthorization.mo",
+    "backend/authorization/access-control.mo",
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/hero-background.dim_1920x600.png",
+    "frontend/public/assets/generated/project-icon.dim_64x64.png",
+    "frontend/public/assets/generated/property-icon.dim_64x64.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/LoginButton.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/ProfileSetupModal.tsx",
+    "frontend/src/components/ProjectCard.tsx",
+    "frontend/src/components/ProjectFilters.tsx",
+    "frontend/src/components/ProjectForm.tsx",
+    "frontend/src/components/PropertyCard.tsx",
+    "frontend/src/components/PropertyFilters.tsx",
+    "frontend/src/components/PropertyForm.tsx",
+    "frontend/src/components/TaskCard.tsx",
+    "frontend/src/components/TaskFilters.tsx",
+    "frontend/src/components/TaskForm.tsx",
+    "frontend/src/components/TeamMemberCard.tsx",
+    "frontend/src/components/TeamMemberForm.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/ProjectsPage.tsx",
+    "frontend/src/pages/PropertiesPage.tsx",
+    "frontend/src/pages/TasksPage.tsx",
+    "frontend/src/pages/TeamPage.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
